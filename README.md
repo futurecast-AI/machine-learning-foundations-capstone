@@ -34,3 +34,20 @@ Required submission files: `modeling.ipynb`, `module_summary.pdf`, `hour.csv`,
 `requirements.txt`. Editable report versions, saved outputs and tests are
 included as supporting material. Read `SUBMISSION_CHECKLIST.md` and
 `MODELING_PLAN.md` before submitting.
+
+## Optional document construction
+
+Reviewers can run the submitted notebook directly; these authoring steps are
+only needed to reconstruct it from its generator:
+
+```bash
+python scripts/build_notebook.py
+python -m nbconvert --to notebook --execute --inplace modeling.ipynb --ExecutePreprocessor.timeout=600
+python scripts/build_notebook.py --finalize
+```
+
+The finalization step fills the last Markdown summary with actual saved metrics
+without changing the model or its outputs. `scripts/build_report.py <template.docx>`
+builds the report from those outputs using a local export of the previously
+supplied CCC APA template and a system LibreOffice installation. Neither the
+original template nor LibreOffice is needed to execute the ML notebook.
