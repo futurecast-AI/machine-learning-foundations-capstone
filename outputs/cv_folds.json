@@ -1,0 +1,29 @@
+[
+  {
+    "fold": 1,
+    "train_rows": 3386,
+    "validation_rows": 3487,
+    "train_start": "2011-01-01 00:00:00",
+    "train_end": "2011-05-25 23:00:00",
+    "validation_start": "2011-05-27 00:00:00",
+    "validation_end": "2011-10-19 23:00:00"
+  },
+  {
+    "fold": 2,
+    "train_rows": 6874,
+    "validation_rows": 3492,
+    "train_start": "2011-01-01 00:00:00",
+    "train_end": "2011-10-18 23:00:00",
+    "validation_start": "2011-10-20 00:00:00",
+    "validation_end": "2012-03-13 23:00:00"
+  },
+  {
+    "fold": 3,
+    "train_rows": 10365,
+    "validation_rows": 3502,
+    "train_start": "2011-01-01 00:00:00",
+    "train_end": "2012-03-12 23:00:00",
+    "validation_start": "2012-03-14 00:00:00",
+    "validation_end": "2012-08-06 23:00:00"
+  }
+]
