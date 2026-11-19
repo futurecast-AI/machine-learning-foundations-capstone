@@ -1,0 +1,141 @@
+{
+  "rows": 17379,
+  "raw_columns": 17,
+  "features": [
+    "season",
+    "yr",
+    "mnth",
+    "hr",
+    "holiday",
+    "weekday",
+    "workingday",
+    "weathersit",
+    "temp",
+    "atemp",
+    "hum",
+    "windspeed"
+  ],
+  "source_sha256": "e03de4ee4ef4dc376ac6e04bf829673c6269e8eba5c60fa121640fa2f829504f",
+  "missing_cells": 0,
+  "unrecorded_clock_hours": 165,
+  "split": [
+    {
+      "partition": "development",
+      "rows": 13891,
+      "dates": 584,
+      "start": "2011-01-01 00:00:00",
+      "end": "2012-08-06 23:00:00"
+    },
+    {
+      "partition": "test",
+      "rows": 3488,
+      "dates": 147,
+      "start": "2012-08-07 00:00:00",
+      "end": "2012-12-31 23:00:00"
+    }
+  ],
+  "forest_parameters": {
+    "n_estimators": 150,
+    "max_depth": 14,
+    "min_samples_leaf": 2,
+    "max_features": 1.0,
+    "bootstrap": true,
+    "criterion": "squared_error",
+    "random_state": 20261119,
+    "n_jobs": 1
+  },
+  "metrics": [
+    {
+      "model": "Training-mean baseline",
+      "partition": "development_training",
+      "n": 13891,
+      "mae": 131.04493118960823,
+      "rmse": 166.90056863236285,
+      "r2": 0.0
+    },
+    {
+      "model": "Training-mean baseline",
+      "partition": "held_out_test",
+      "n": 3488,
+      "mae": 174.97113521542894,
+      "rmse": 232.55875344587955,
+      "r2": -0.11244038117651556
+    },
+    {
+      "model": "Random forest",
+      "partition": "development_training",
+      "n": 13891,
+      "mae": 36.669526965183664,
+      "rmse": 54.0454830073773,
+      "r2": 0.8951416131130989
+    },
+    {
+      "model": "Random forest",
+      "partition": "held_out_test",
+      "n": 3488,
+      "mae": 72.57380438490063,
+      "rmse": 104.6460517699244,
+      "r2": 0.7747540151743194
+    }
+  ],
+  "cv_results": [
+    {
+      "fold": 1,
+      "model": "Training-mean baseline",
+      "mae": 129.06652860146647,
+      "rmse": 170.55552454562024,
+      "r2": -0.3010095749969459
+    },
+    {
+      "fold": 1,
+      "model": "Random forest",
+      "mae": 80.19994868379369,
+      "rmse": 106.60812020111048,
+      "r2": 0.49168903144472553
+    },
+    {
+      "fold": 2,
+      "model": "Training-mean baseline",
+      "mae": 102.86558069802344,
+      "rmse": 128.50020618537198,
+      "r2": -0.0020499554015660504
+    },
+    {
+      "fold": 2,
+      "model": "Random forest",
+      "mae": 62.00536756017758,
+      "rmse": 89.90631767903442,
+      "r2": 0.5094738721555896
+    },
+    {
+      "fold": 3,
+      "model": "Training-mean baseline",
+      "mae": 187.6984972820989,
+      "rmse": 246.48002198103885,
+      "r2": -0.30933911243066814
+    },
+    {
+      "fold": 3,
+      "model": "Random forest",
+      "mae": 99.80926090084505,
+      "rmse": 132.99406419433504,
+      "r2": 0.6187997216983798
+    }
+  ],
+  "rmse_improvement_over_baseline": 0.55002316524595,
+  "test_unknown_category_counts": {
+    "season": 0,
+    "yr": 0,
+    "mnth": 0,
+    "hr": 0,
+    "holiday": 0,
+    "weekday": 0,
+    "workingday": 0,
+    "weathersit": 0
+  },
+  "worst_hour_by_mae": 16,
+  "worst_hour_mae": 133.0303893358687,
+  "test_mean_actual": 248.55991972477065,
+  "development_mean_actual": 174.62400115182493,
+  "test_mean_residual": 43.90642398434207
+}
